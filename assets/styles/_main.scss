@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__task {
+    display: inline-flex;
+    margin: 30px 0;
+    &-idea {
+      border: none;
+      outline: none;
+      background-color: rgb(230, 230, 230);
+      font-size: 40px;
+      padding: 10px;
+      width: 50vw;
+      border-radius: 10px 0 0 10px;
+      font-family: monospace;
+      text-overflow: ellipsis;
+    }
+    &-add {
+      background-color: rgb(230, 230, 230);
+      border: none;
+      font-size: 28px;
+      padding: 10px;
+      border-radius: 0 10px 10px 0;
+      font-family: monospace;
+      font-weight: 700;
+    }
+  }
+  &__todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    gap: 30px;
+    overflow: auto;
+    height: 50dvh;
+  }
+}
+.todo {
+  &__item {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__check,
+  &__content,
+  &__edit,
+  &__delete {
+    font-family: monospace;
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  &__content {
+    width: 30vw;
+    text-overflow: ellipsis;
+  }
+}
