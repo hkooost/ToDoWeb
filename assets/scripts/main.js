@@ -3,9 +3,7 @@ const taskAdd = document.querySelector(".task-add");
 const taskList = document.querySelector(".todo");
 
 // Create task
-taskAdd.addEventListener("click", () => {
-  const taskList = document.querySelector(".todo");
-
+taskAdd.addEventListener('click', () => {
   if (taskValue.value == "") alert('Write something :/');
   else {
     const newTask = document.createElement("li");
@@ -17,11 +15,11 @@ taskAdd.addEventListener("click", () => {
     todoCheck.innerText = "[ ]";
     newTask.appendChild(todoCheck);
 
-    const todoContent = document.createElement("input");
+    const todoContent = document.createElement("div");
     todoContent.classList.add("todo__content");
-    todoContent.value = taskValue.value;
+    todoContent.innerText = taskValue.value;
     newTask.appendChild(todoContent);
-    todoContent.readOnly = true;
+    taskValue.value = "";
 
     const todoDel = document.createElement("button");
     todoDel.classList.add("todo__delete");
@@ -29,8 +27,17 @@ taskAdd.addEventListener("click", () => {
     newTask.appendChild(todoDel)
 
   }
+  saveData();
 })
 taskValue.value = "";
+
+// Enter trigger
+taskValue.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    taskAdd.click();
+  }
+});
 
 // Check, delete
 taskList.addEventListener('click', (e) => {
@@ -40,10 +47,21 @@ taskList.addEventListener('click', (e) => {
     {
       item.innerText = "[v]";
       item.parentElement.classList.add("completed");
-    } else null
+      saveData();
+    }
   // Delete
   if (item.classList[0] === 'todo__delete')
     {
       item.parentElement.remove();
-    } else null
+      saveData();
+    }
 })
+
+// localStorage
+let saveData = () => {
+  localStorage.setItem("data", taskList.innerHTML);
+}
+let getData = () => {
+  taskList.innerHTML = localStorage.getItem("data");
+}
+getData();
