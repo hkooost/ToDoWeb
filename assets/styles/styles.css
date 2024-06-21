@@ -85,6 +85,7 @@ button {
 }
 .todo__content {
   width: 30vw;
+  overflow-y: hidden;
   text-overflow: ellipsis;
 }
 
