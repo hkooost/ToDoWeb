@@ -6,13 +6,14 @@
 ### ***Features:***
   + Minimalistic design
   + Easy-to-use
-### ***Future Features:***
   + Local Storage
+### ***Future Features:***
   + Responsive design
   + Themes
-
+  + Task creation time
+  + Import/export list
 ---
 
 # Preview
-![image](https://raw.githubusercontent.com/hkooost/ToDoWeb/main/preview.png)
-![image](https://raw.githubusercontent.com/hkooost/ToDoWeb/main/preview2.png)
+![Preview](https://raw.githubusercontent.com/hkooost/ToDoWeb/main/preview.png)
+![Preview](https://raw.githubusercontent.com/hkooost/ToDoWeb/main/preview2.png)
