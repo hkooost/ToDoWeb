@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  &__title {
+    display: inline-block;
+    text-align: center;
+  }
+  &__logo {
+    padding: 10px;
+  }
+}
+.page__header {
+  border: 1px dotted;
+}
+.logo {
+  display: inline-block;
+  &__logo {
+    width: 50px;
+  }
+}
