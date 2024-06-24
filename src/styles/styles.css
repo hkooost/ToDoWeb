@@ -1,0 +1,91 @@
+.page {
+  font-family: monospace !important;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+}
+.header__title {
+  display: inline-block;
+  text-align: center;
+}
+.header__logo {
+  padding: 10px;
+}
+
+.page__header {
+  border: 1px dotted;
+}
+
+.logo {
+  display: inline-block;
+}
+.logo__logo {
+  width: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.main__task {
+  display: inline-flex;
+}
+.main__task-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  font-family: monospace;
+  text-overflow: ellipsis;
+}
+.main__task-input::placeholder {
+  color: lightslategray;
+  font-style: italic;
+}
+.main__todo-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  height: 80vh;
+  gap: 10px;
+  overflow: auto;
+}
+
+.todo__item {
+  display: inline-flex;
+  align-items: center;
+}
+.todo__check, .todo__content, .todo__delete {
+  font-family: monospace;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.todo__check, .todo__delete {
+  width: 55px;
+}
+.todo__content {
+  width: fit-content;
+  overflow-wrap: anywhere;
+}
+
+.completed {
+  filter: opacity(0.3);
+}
+
+/*# sourceMappingURL=styles.css.map */
