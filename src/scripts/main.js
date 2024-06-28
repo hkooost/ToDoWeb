@@ -11,22 +11,21 @@ taskValue.addEventListener('keypress', (e) => {
       newTask.classList.add("todo__item");
       taskList.appendChild(newTask);
 
-      const todoCheck = document.createElement("button");
-      todoCheck.classList.add("todo__check");
-      todoCheck.innerText = "[ ]";
-      newTask.appendChild(todoCheck);
-
       const todoDel = document.createElement("button");
       todoDel.classList.add("todo__delete");
       todoDel.innerText = "[X]";
       newTask.appendChild(todoDel)
+
+      const todoCheck = document.createElement("button");
+      todoCheck.classList.add("todo__check");
+      todoCheck.innerText = "[ ]";
+      newTask.appendChild(todoCheck);
 
       const todoContent = document.createElement("div");
       todoContent.classList.add("todo__content");
       todoContent.innerText = taskValue.value;
       newTask.appendChild(todoContent);
       taskValue.value = "";
-
     }
     saveData();
   }
