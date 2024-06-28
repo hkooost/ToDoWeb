@@ -44,8 +44,8 @@
     background-color: transparent;
     outline: none;
   }
-  &__check, &__delete {
-    width: 55px;
+  &__delete:hover {
+    color: orangered;
   }
   &__content {
     width: fit-content;
