@@ -1,5 +1,8 @@
 # &#128221; ToDoWeb
-Minimalistic todo website in mono style written with HTML | CSS<sup> SCSS</sup> | JS
+Minimalistic todo website in mono style written with&nbsp;
+<img height=16px src="https://cdn.simpleicons.org/html5/e34f26" title="HTML"></img>&nbsp;
+<img height=16px src="https://cdn.simpleicons.org/sass/cc6699" title="SCSS"></img>&nbsp;
+<img height=16px src="https://cdn.simpleicons.org/javascript/f7df1e" title="JavaScript"></img>&nbsp;
 ## ***Features:***
   + Minimalistic design
   + Easy-to-use
