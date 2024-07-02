@@ -2,32 +2,34 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  &__task {
-    display: inline-flex;
-    &-input {
-      border: none;
-      outline: none;
-      background-color: transparent;
-      font-size: 20px;
-      padding: 10px;
-      width: 100%;
-      border-radius: 10px 0 0 10px;
-      font-family: monospace;
-      text-overflow: ellipsis;
-      &::placeholder {
-        color: lightslategray;
-        font-style: italic;
-      }
-    }
-  }
+  height: 100%;
   &__todo-list {
+    margin-top: 44px;
     display: flex;
     flex-direction: column;
     padding: 0;
-    width: 100%;
-    height: 80vh;
+    height: 100%;
     gap: 10px;
     overflow: auto;
+  }
+}
+.task-add {
+  display: inline-flex;
+  margin-top: 56px;
+  &__input {
+    position: fixed;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    font-family: monospace;
+    text-overflow: ellipsis;
+    &::placeholder {
+      color: lightslategray;
+      font-style: italic;
+    }
   }
 }
 .todo {
@@ -36,18 +38,22 @@
     align-items: center;
   }
   &__check,
-  &__content,
   &__delete {
     font-family: monospace;
+    width: 60px;
     font-size: 24px;
     border: none;
     background-color: transparent;
-    outline: none;
   }
   &__delete:hover {
     color: orangered;
   }
   &__content {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: monospace;
+    font-size: 24px;
     width: fit-content;
     overflow-wrap: anywhere;
   }
