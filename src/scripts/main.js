@@ -1,4 +1,4 @@
-const taskValue = document.querySelector(".task-input");
+const taskValue = document.querySelector(".task-add__input");
 const taskList = document.querySelector(".todo");
 
 // Create task
@@ -13,7 +13,7 @@ taskValue.addEventListener('keypress', (e) => {
 
       const todoDel = document.createElement("button");
       todoDel.classList.add("todo__delete");
-      todoDel.innerText = "[X]";
+      todoDel.innerText = "—";
       newTask.appendChild(todoDel)
 
       const todoCheck = document.createElement("button");
@@ -36,15 +36,13 @@ taskValue.value = "";
 taskList.addEventListener('click', (e) => {
   const item = e.target;
   // Check
-  if (item.classList[0] === 'todo__check')
-    {
+  if (item.classList[0] === 'todo__check') {
       item.innerText = "[v]";
       item.parentElement.classList.add("completed");
       saveData();
     }
   // Delete
-  if (item.classList[0] === 'todo__delete')
-    {
+  if (item.classList[0] === 'todo__delete') {
       item.parentElement.remove();
       saveData();
     }
