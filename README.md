@@ -7,9 +7,9 @@ Minimalistic todo website in mono style written with&nbsp;
   + Minimalistic design
   + Easy-to-use
   + Local Storage
+  + Themes (in progress)
 ## ***Coming soon:***
   + Responsive design
-  + Themes
   + Task creation time
   + Import/export list
 ## Preview
