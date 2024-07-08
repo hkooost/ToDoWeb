@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   &__logo {
     display: inline-block;
@@ -13,4 +14,46 @@
   left: 0;
   right: 0;
   border-bottom: 1px dotted;
+}
+.themes {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: 0;
+  gap: 10px;
+  &__title {
+    display: none;
+  }
+}
+input[type="radio"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: 3px solid var(--input-color);
+  outline-offset: 3px;
+  appearance: none;
+  border-radius: 50%;
+}
+input[type="radio"]:checked {
+  background-color: var(--input-color);
+}
+input[type="radio"].light {
+  --input-color: lightgray;
+}
+input[type="radio"].dark {
+  --input-color: #352f44;
+}
+input[type="radio"].dark:checked {
+  --input-color: #b9b4c7;
+}
+input[type="radio"].black {
+  --input-color: #000;
+}
+input[type="radio"].black:checked {
+  --input-color: #fff;
+}
+input[type="radio"].mint {
+  --input-color: #468585;
+}
+input[type="radio"].sea {
+  --input-color: #4682a9;
 }

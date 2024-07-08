@@ -12,13 +12,15 @@ html {
   height: 100%;
 }
 
-button {
+button,
+input {
   cursor: pointer;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 .nav__logo {
@@ -32,6 +34,58 @@ button {
   left: 0;
   right: 0;
   border-bottom: 1px dotted;
+}
+
+.themes {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: 0;
+  gap: 10px;
+}
+.themes__title {
+  display: none;
+}
+
+input[type=radio] {
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: 3px solid var(--input-color);
+  outline-offset: 3px;
+  appearance: none;
+  border-radius: 50%;
+}
+
+input[type=radio]:checked {
+  background-color: var(--input-color);
+}
+
+input[type=radio].light {
+  --input-color: lightgray;
+}
+
+input[type=radio].dark {
+  --input-color: #352f44;
+}
+
+input[type=radio].dark:checked {
+  --input-color: #b9b4c7;
+}
+
+input[type=radio].black {
+  --input-color: #000;
+}
+
+input[type=radio].black:checked {
+  --input-color: #fff;
+}
+
+input[type=radio].mint {
+  --input-color: #468585;
+}
+
+input[type=radio].sea {
+  --input-color: #4682a9;
 }
 
 .main {
@@ -53,7 +107,6 @@ button {
 .task-add {
   display: inline-flex;
   margin-top: 56px;
-  z-index: 999;
 }
 .task-add__input {
   position: fixed;
@@ -97,6 +150,48 @@ button {
 
 .completed {
   filter: opacity(0.3);
+}
+
+:root {
+  --background: #fff;
+  --foreground: #000;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+:root:has(.light:checked) {
+  --background: #fff;
+  --foreground: #000;
+}
+
+:root:has(.dark:checked) {
+  --background: #352f44;
+  --foreground: #b9b4c7;
+}
+
+:root:has(.black:checked) {
+  --background: #000;
+  --foreground: #fff;
+}
+
+:root:has(.mint:checked) {
+  --background: #9cdba6;
+  --foreground: #468585;
+}
+
+:root:has(.sea:checked) {
+  --background: #91c8e4;
+  --foreground: #4682a9;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #fff;
+    --foreground: #000;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
