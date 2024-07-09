@@ -26,8 +26,8 @@
     width: 100%;
     font-family: monospace;
     text-overflow: ellipsis;
+    color: var(--foreground);
     &::placeholder {
-      color: lightslategray;
       font-style: italic;
     }
   }
@@ -44,6 +44,7 @@
     font-size: 24px;
     border: none;
     background-color: transparent;
+    color: var(--foreground);
   }
   &__delete:hover {
     color: orangered;
@@ -56,5 +57,6 @@
     font-size: 24px;
     width: fit-content;
     overflow-wrap: anywhere;
+    color: var(--foreground);
   }
 }

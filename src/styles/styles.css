@@ -27,6 +27,7 @@ input {
   display: inline-block;
   padding: 10px;
   width: 50px;
+  fill: var(--foreground);
 }
 
 .page__nav {
@@ -41,51 +42,14 @@ input {
   display: flex;
   align-items: center;
   border: 0;
-  gap: 10px;
+  gap: 5px;
 }
-.themes__title {
-  display: none;
-}
-
-input[type=radio] {
-  width: 1.5rem;
-  height: 1.5rem;
-  outline: 3px solid var(--input-color);
-  outline-offset: 3px;
+.themes__radio {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--input-color);
   appearance: none;
   border-radius: 50%;
-}
-
-input[type=radio]:checked {
-  background-color: var(--input-color);
-}
-
-input[type=radio].light {
-  --input-color: lightgray;
-}
-
-input[type=radio].dark {
-  --input-color: #352f44;
-}
-
-input[type=radio].dark:checked {
-  --input-color: #b9b4c7;
-}
-
-input[type=radio].black {
-  --input-color: #000;
-}
-
-input[type=radio].black:checked {
-  --input-color: #fff;
-}
-
-input[type=radio].mint {
-  --input-color: #468585;
-}
-
-input[type=radio].sea {
-  --input-color: #4682a9;
 }
 
 .main {
@@ -118,9 +82,9 @@ input[type=radio].sea {
   width: 100%;
   font-family: monospace;
   text-overflow: ellipsis;
+  color: var(--foreground);
 }
 .task-add__input::placeholder {
-  color: lightslategray;
   font-style: italic;
 }
 
@@ -134,6 +98,7 @@ input[type=radio].sea {
   font-size: 24px;
   border: none;
   background-color: transparent;
+  color: var(--foreground);
 }
 .todo__delete:hover {
   color: orangered;
@@ -146,10 +111,11 @@ input[type=radio].sea {
   font-size: 24px;
   width: fit-content;
   overflow-wrap: anywhere;
+  color: var(--foreground);
 }
 
 .completed {
-  filter: opacity(0.3);
+  filter: opacity(0.5);
 }
 
 :root {
@@ -157,7 +123,7 @@ input[type=radio].sea {
   --foreground: #000;
 }
 
-html {
+body {
   background-color: var(--background);
   color: var(--foreground);
 }
@@ -168,13 +134,8 @@ html {
 }
 
 :root:has(.dark:checked) {
-  --background: #352f44;
-  --foreground: #b9b4c7;
-}
-
-:root:has(.black:checked) {
-  --background: #000;
-  --foreground: #fff;
+  --background: #272829;
+  --foreground: #d8d9da;
 }
 
 :root:has(.mint:checked) {
@@ -187,11 +148,28 @@ html {
   --foreground: #4682a9;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #fff;
-    --foreground: #000;
-  }
+input[type=radio]:checked {
+  background-color: var(--input-color);
+}
+
+input[type=radio].light {
+  --input-color: lightgray;
+}
+
+input[type=radio].dark {
+  --input-color: #272829;
+}
+
+input[type=radio].dark:checked {
+  --input-color: #d8d9da;
+}
+
+input[type=radio].mint {
+  --input-color: #468585;
+}
+
+input[type=radio].sea {
+  --input-color: #4682a9;
 }
 
 /*# sourceMappingURL=styles.css.map */

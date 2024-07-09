@@ -2,7 +2,7 @@
   --background: #fff;
   --foreground: #000;
 }
-html {
+body {
 	background-color: var(--background);
   color: var(--foreground);
 }
@@ -12,12 +12,8 @@ html {
   --foreground: #000;
 }
 :root:has(.dark:checked) {
-  --background: #352f44;
-  --foreground: #b9b4c7;
-}
-:root:has(.black:checked) {
-  --background: #000;
-  --foreground: #fff;
+  --background: #272829;
+  --foreground: #d8d9da;
 }
 :root:has(.mint:checked) {
   --background: #9cdba6;
@@ -28,9 +24,21 @@ html {
   --foreground: #4682a9;
 }
 
-@media (prefers-color-scheme: light){
-	:root{
-		--background: #fff;
-    --foreground: #000;
-	}
+input[type="radio"]:checked {
+  background-color: var(--input-color);
+}
+input[type="radio"].light {
+  --input-color: lightgray;
+}
+input[type="radio"].dark {
+  --input-color: #272829;
+}
+input[type="radio"].dark:checked {
+  --input-color: #d8d9da;
+}
+input[type="radio"].mint {
+  --input-color: #468585;
+}
+input[type="radio"].sea {
+  --input-color: #4682a9;
 }
