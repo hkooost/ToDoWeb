@@ -4,7 +4,7 @@
   flex: 1;
   height: 100%;
   &__todo-list {
-    margin-top: 50px;
+    margin: 50px 0 0 0;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -15,7 +15,7 @@
 }
 .task-add {
   display: inline-flex;
-  margin-top: 56px;
+  margin-top: 60px;
   &__input {
     position: fixed;
     border: none;
