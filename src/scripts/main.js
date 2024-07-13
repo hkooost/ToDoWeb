@@ -1,11 +1,13 @@
 const taskValue = document.querySelector(".task-add__input");
 const taskList = document.querySelector(".todo");
+const notify = document.querySelector(".popup");
+const themes = document.querySelectorAll('[name="theme"]');
 
 // Create task
 taskValue.addEventListener('keypress', (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
-    if (taskValue.value === "") alert('Write something :/');
+    if (taskValue.value === "") newAlert();
     else {
       const newTask = document.createElement("li");
       newTask.classList.add("todo__item");
@@ -47,6 +49,16 @@ taskList.addEventListener('click', (e) => {
       saveData();
     }
 })
+
+// Alert function
+newAlert = () => {
+  if (notify.classList[2] === "page__popup_disabled") {
+    notify.classList.replace("page__popup_disabled", "page__popup_enabled")
+  }
+  setTimeout(() => {
+    notify.classList.replace("page__popup_enabled", "page__popup_disabled")
+  }, 3000);
+}
 
 // localStorage
 let saveData = () => {
