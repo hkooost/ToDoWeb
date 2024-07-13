@@ -56,7 +56,7 @@ newAlert = () => {
     notify.classList.replace("page__popup_disabled", "page__popup_enabled")
   }
   setTimeout(() => {
-    notify.classList.replace("page__popup_enabled", "page__popup_disabled")
+    notify.classList.replace("page__popup_enabled", "page__popup_disabled");
   }, 3000);
 }
 
