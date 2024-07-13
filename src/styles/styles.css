@@ -63,7 +63,7 @@ input {
   height: 100%;
 }
 .main__todo-list {
-  margin: 50px 0 0 0;
+  margin: 50px 10px 0 10px;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -97,6 +97,7 @@ input {
   align-items: center;
 }
 .todo__check, .todo__delete {
+  padding: 0;
   font-family: monospace;
   width: 60px;
   font-size: 24px;
@@ -113,7 +114,7 @@ input {
   border: none;
   font-family: monospace;
   font-size: 24px;
-  width: fit-content;
+  width: 100%;
   overflow-wrap: anywhere;
   color: var(--foreground);
 }
