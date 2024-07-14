@@ -171,8 +171,8 @@ body {
 }
 
 :root:has(.sea:checked) {
-  --background: #91c8e4;
-  --foreground: #4682a9;
+  --background: #46b3e6;
+  --foreground: #0f4c75;
 }
 
 input[type=radio]:checked {
@@ -196,7 +196,11 @@ input[type=radio].mint {
 }
 
 input[type=radio].sea {
-  --input-color: #4682a9;
+  --input-color: #46b3e6;
+}
+
+input[type=radio].sea:checked {
+  --input-color: #0f4c75;
 }
 
 .completed {
