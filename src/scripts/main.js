@@ -53,10 +53,12 @@ taskList.addEventListener('click', (e) => {
 // Alert function
 newAlert = () => {
   if (notify.classList[2] === "page__popup_disabled") {
-    notify.classList.replace("page__popup_disabled", "page__popup_enabled")
+    notify.classList.replace("page__popup_disabled", "page__popup_enabled");
+    notify.classList.add("page__popup_alert");
   }
   setTimeout(() => {
     notify.classList.replace("page__popup_enabled", "page__popup_disabled");
+    notify.classList.remove("page__popup_alert");
   }, 3000);
 }
 

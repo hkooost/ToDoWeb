@@ -145,10 +145,6 @@ input {
   display: block;
 }
 
-.completed {
-  filter: opacity(0.5);
-}
-
 :root {
   --background: #fff;
   --foreground: #000;
@@ -201,6 +197,33 @@ input[type=radio].mint {
 
 input[type=radio].sea {
   --input-color: #4682a9;
+}
+
+.completed {
+  filter: opacity(0.5);
+}
+
+.page__popup_alert {
+  animation-name: alert;
+  animation-duration: 0.3s;
+}
+@keyframes alert {
+  0% {
+    right: 0;
+    background-color: #c40c0c;
+  }
+  25% {
+    right: 5px;
+    background-color: var(--background);
+  }
+  50% {
+    right: -5px;
+    background-color: #c40c0c;
+  }
+  to {
+    right: 0;
+    background-color: var(--background);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
