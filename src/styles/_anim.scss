@@ -1,0 +1,22 @@
+.page__popup_alert {
+  animation-name: alert;
+  animation-duration: .3s;
+  @keyframes alert {
+    0% {
+      right: 0;
+      background-color: #c40c0c;
+    }
+    25% {
+      right: 5px;
+      background-color: var(--background);
+    }
+    50% {
+      right: -5px;
+      background-color: #c40c0c;
+    }
+    to {
+      right: 0;
+      background-color: var(--background);
+    }
+  }
+}
