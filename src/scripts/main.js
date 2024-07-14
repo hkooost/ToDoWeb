@@ -1,7 +1,6 @@
 const taskValue = document.querySelector(".task-add__input");
 const taskList = document.querySelector(".todo");
 const notify = document.querySelector(".popup");
-const themes = document.querySelectorAll('[name="theme"]');
 
 // Create task
 taskValue.addEventListener('keypress', (e) => {
