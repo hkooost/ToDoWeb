@@ -166,7 +166,7 @@ body {
 }
 
 :root:has(.mint:checked) {
-  --background: #9DF3C4;
+  --background: #9df3c4;
   --foreground: #468585;
 }
 
