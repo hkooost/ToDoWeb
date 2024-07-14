@@ -10,6 +10,7 @@ Minimalistic todo website in mono style written with&nbsp;
   + Themes
 ## ***Coming soon:***
   + Responsive design
+  + Unique alerts
   + Task creation time
 ## Preview
 ![Preview](https://raw.githubusercontent.com/hkooost/ToDoWeb/534e093cd976b433785ab9351f06274a4c894107/assets/preview.jpg)
