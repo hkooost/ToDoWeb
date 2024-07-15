@@ -1,0 +1,23 @@
+@media only screen and (max-width: 500px) {
+  .task-add {
+    &__input {
+      font-size: 1.05rem;
+    }
+  }
+  .todo {
+    &__check,
+    &__delete {
+      width: 50px;
+      font-size: 18px;
+    }
+    &__content {
+      font-size: 18px;
+    }
+  }
+  .popup {
+    border: 2px dotted;
+    &__text {
+      font-size: 18px;
+    }
+  }
+}

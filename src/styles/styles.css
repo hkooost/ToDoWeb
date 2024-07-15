@@ -1,7 +1,3 @@
-* {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   width: 100%;
@@ -13,7 +9,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
 }
 
 button,
@@ -207,6 +203,24 @@ input[type=radio].sea:checked {
   filter: opacity(0.5);
 }
 
+@media only screen and (max-width: 500px) {
+  .task-add__input {
+    font-size: 1.05rem;
+  }
+  .todo__check, .todo__delete {
+    width: 50px;
+    font-size: 18px;
+  }
+  .todo__content {
+    font-size: 18px;
+  }
+  .popup {
+    border: 2px dotted;
+  }
+  .popup__text {
+    font-size: 18px;
+  }
+}
 .page__popup_alert {
   animation-name: alert;
   animation-duration: 0.3s;
