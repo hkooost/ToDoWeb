@@ -27,6 +27,12 @@ taskValue.addEventListener('keypress', (e) => {
       todoContent.innerText = taskValue.value;
       newTask.appendChild(todoContent);
       taskValue.value = "";
+
+      const todoDate = document.createElement("div");
+      const time = new Date();
+      todoDate.classList.add("todo__time");
+      todoDate.innerText = time.toLocaleString();
+      todoContent.appendChild(todoDate);
     }
     saveData();
   }

@@ -37,6 +37,10 @@
     display: inline-flex;
     align-items: center;
   }
+  &__time {
+    font-size: 12px;
+    font-weight: 600;
+  }
   &__check,
   &__delete {
     padding: 0;
