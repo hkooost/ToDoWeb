@@ -8,8 +8,8 @@ Minimalistic todo website in mono style written with&nbsp;
   + Easy-to-use
   + Local Storage
   + Themes
+  + Responsive design (in progress)
 ## ***Coming soon:***
-  + Responsive design
   + Unique alerts
   + Task creation time
 ## Preview
