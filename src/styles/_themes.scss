@@ -7,21 +7,15 @@ body {
   color: var(--foreground);
 }
 
+.light,
 :root:has(.light:checked) {
   --background: #fff;
   --foreground: #000;
 }
+.dark,
 :root:has(.dark:checked) {
   --background: #272829;
   --foreground: #d8d9da;
-}
-:root:has(.mint:checked) {
-  --background: #9df3c4;
-  --foreground: #468585;
-}
-:root:has(.sea:checked) {
-  --background: #46b3e6;
-  --foreground: #0f4c75;
 }
 
 input[type="radio"]:checked {
@@ -35,13 +29,4 @@ input[type="radio"].dark {
 }
 input[type="radio"].dark:checked {
   --input-color: #d8d9da;
-}
-input[type="radio"].mint {
-  --input-color: #468585;
-}
-input[type="radio"].sea {
-  --input-color: #46b3e6;
-}
-input[type="radio"].sea:checked {
-  --input-color: #0f4c75;
 }
