@@ -17,6 +17,11 @@ input {
   cursor: pointer;
 }
 
+a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -59,7 +64,7 @@ input {
   height: 100%;
 }
 .main__todo-list {
-  margin: 50px 10px 0 10px;
+  margin: 50px 10px 16px 10px;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -143,6 +148,29 @@ input {
 }
 .page__popup_enabled {
   display: block;
+}
+
+.page__bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--foreground);
+  fill: var(--foreground);
+  font-size: 14px;
+}
+.bar__item {
+  display: inherit;
+  align-items: center;
+  margin: 3px;
 }
 
 :root {
