@@ -171,16 +171,12 @@ input[type=radio]:checked {
   background-color: var(--input-color);
 }
 
-input[type=radio].light {
+input[type=radio].light, input[type=radio].dark:checked {
   --input-color: lightgray;
 }
 
 input[type=radio].dark {
   --input-color: #272829;
-}
-
-input[type=radio].dark:checked {
-  --input-color: #d8d9da;
 }
 
 .completed {
