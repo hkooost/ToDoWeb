@@ -1,7 +1,9 @@
 const themes = document.querySelectorAll('[name="theme"]');
+const themeBar = document.querySelector('.current-theme');
 
 let saveTheme = (theme) => {
   localStorage.setItem("theme", theme);
+  themeBar.innerText = theme;
 }
 themes.forEach((currentTheme) => {
   currentTheme.addEventListener("click", () => {
@@ -14,6 +16,7 @@ let loadTheme = () => {
   themes.forEach((currentTheme) => {
     if (currentTheme.classList[1] === savedTheme) {
       currentTheme.checked = true;
+      themeBar.innerText = savedTheme;
     }
   })
 }
