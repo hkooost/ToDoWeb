@@ -1,7 +1,10 @@
 const taskValue = document.querySelector(".task-add__input");
 const taskList = document.querySelector(".todo");
 const notify = document.querySelector(".popup");
+const allTask = document.querySelector('.todo-all');
+let total = 0;
 
+allTask.innerText = total;
 // Create task
 taskValue.addEventListener('keypress', (e) => {
   if (e.key === "Enter") {
@@ -33,7 +36,10 @@ taskValue.addEventListener('keypress', (e) => {
       todoDate.classList.add("todo__time");
       todoDate.innerText = time.toLocaleString();
       todoContent.appendChild(todoDate);
+
+      total = taskList.children.length;
     }
+    allTask.innerText = total;
     saveData();
   }
 });
@@ -51,6 +57,8 @@ taskList.addEventListener('click', (e) => {
   // Delete
   if (item.classList[0] === 'todo__delete') {
       item.parentElement.remove();
+      total = taskList.children.length;
+      allTask.innerText = total;
       saveData();
     }
 })
