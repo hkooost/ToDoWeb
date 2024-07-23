@@ -1,0 +1,21 @@
+.page__bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--foreground);
+  fill: var(--foreground);
+  font-size: 14px;
+  &__item {
+    display: inherit;
+    align-items: center;
+    margin: 3px;
+  }
+}
