@@ -64,7 +64,7 @@ a {
   height: 100%;
 }
 .main__todo-list {
-  margin: 50px 10px 16px 10px;
+  margin: 50px 10px 28px 10px;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -155,7 +155,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 16px;
+  height: fit-content;
 }
 
 .bar {
@@ -170,7 +170,14 @@ a {
 .bar__item {
   display: inherit;
   align-items: center;
-  margin: 3px;
+  margin: 5px 10px;
+}
+.bar__item > a {
+  display: inline-flex;
+  gap: 10px;
+}
+.bar__item > p {
+  margin: 0;
 }
 
 :root {
