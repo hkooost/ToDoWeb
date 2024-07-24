@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 16px;
+  height: fit-content;
 }
 .bar {
   display: flex;
@@ -16,6 +16,13 @@
   &__item {
     display: inherit;
     align-items: center;
-    margin: 3px;
+    margin: 5px 10px;
+    & > a {
+      display: inline-flex;
+      gap: 10px;
+    }
+    & > p {
+      margin: 0;
+    }
   }
 }
