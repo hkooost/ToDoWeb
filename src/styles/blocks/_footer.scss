@@ -3,23 +3,25 @@
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 0 10px;
   height: fit-content;
 }
 .bar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 25px;
   background-color: transparent;
   color: var(--foreground);
-  fill: var(--foreground);
   font-size: 14px;
+  &__divide {
+    flex: 1;
+  }
   &__item {
-    display: inherit;
-    align-items: center;
-    margin: 5px 10px;
+    display: inline-block;
     & > a {
       display: inline-flex;
-      gap: 10px;
+      gap: 5px;
+      fill: var(--foreground);
     }
     & > p {
       margin: 0;
