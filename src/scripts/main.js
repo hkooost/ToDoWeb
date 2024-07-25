@@ -78,8 +78,10 @@ newAlert = () => {
 // localStorage
 let saveData = () => {
   localStorage.setItem("data", taskList.innerHTML);
+  localStorage.setItem("total", allTask.innerText);
 }
 let getData = () => {
   taskList.innerHTML = localStorage.getItem("data");
+  allTask.innerText = localStorage.getItem("total")
 }
 getData();
