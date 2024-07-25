@@ -216,13 +216,6 @@ input[type=radio].dark {
   --input-color: #272829;
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark,
-  :root:has(.dark:checked) {
-    --background: #272829;
-    --foreground: #d8d9da;
-  }
-}
 .completed {
   filter: opacity(0.5);
 }
