@@ -9,20 +9,19 @@ themes.forEach((currentTheme) => {
   currentTheme.addEventListener("click", () => {
     saveTheme(currentTheme.classList[1]);
   })
+  if (window.matchMedia('(prefers-color-scheme: dark)')) {
+    if (currentTheme.classList[1] === 'dark') {
+      currentTheme.checked = true;
+      themeBar.innerText = currentTheme.classList[1];
+    }
+  }
 })
-
 let loadTheme = () => {
   let savedTheme = localStorage.getItem("theme");
   themes.forEach((currentTheme) => {
     if (currentTheme.classList[1] === savedTheme) {
       currentTheme.checked = true;
       themeBar.innerText = savedTheme;
-    }
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      if (currentTheme.classList[1] === 'dark') {
-        currentTheme.checked = true;
-        themeBar.innerText = currentTheme.classList[1];
-      }
     }
   })
 }
