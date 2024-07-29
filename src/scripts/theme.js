@@ -18,6 +18,12 @@ let loadTheme = () => {
       currentTheme.checked = true;
       themeBar.innerText = savedTheme;
     }
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      if (currentTheme.classList[1] === 'dark') {
+        currentTheme.checked = true;
+        themeBar.innerText = currentTheme.classList[1];
+      }
+    }
   })
 }
 loadTheme();
