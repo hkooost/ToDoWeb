@@ -74,7 +74,7 @@ clearAll.addEventListener('click',() => {
     taskList.removeChild(taskList.firstChild);
   }
   newAlert();
-  notifyText.innerText = "All task was cleared"
+  notifyText.innerText = "Tasks cleared"
   total = taskList.children.length;
   allTask.innerText = total;
   saveData();
