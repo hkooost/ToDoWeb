@@ -83,7 +83,7 @@ clearAll.addEventListener('click',() => {
 // Alert function
 newAlert = () => {
   if (notify.classList[2] === "page__popup_disabled") {
-    notify.classList.replace("page__popup_disabled", "page__popup_enabled");
+    notify.classList.toggle("page__popup_enabled");
     notify.classList.add("page__popup_alert");
   }
   setTimeout(() => {
