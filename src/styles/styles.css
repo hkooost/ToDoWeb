@@ -90,6 +90,7 @@ a {
 }
 .task-add__input::placeholder {
   font-style: italic;
+  color: gray;
 }
 
 .todo__item {

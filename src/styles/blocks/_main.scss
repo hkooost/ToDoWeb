@@ -29,6 +29,7 @@
     color: var(--foreground);
     &::placeholder {
       font-style: italic;
+      color: gray;
     }
   }
 }
