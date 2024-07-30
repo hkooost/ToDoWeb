@@ -1,7 +1,9 @@
 const taskValue = document.querySelector(".task-add__input");
 const taskList = document.querySelector(".todo");
 const notify = document.querySelector(".popup");
+const notifyText = document.querySelector(".popup__text");
 const allTask = document.querySelector('.todo-all');
+const clearAll = document.querySelector('.clear-all');
 let total = 0;
 
 allTask.innerText = total;
@@ -9,7 +11,10 @@ allTask.innerText = total;
 taskValue.addEventListener('keypress', (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
-    if (taskValue.value === "") newAlert();
+    if (taskValue.value === "") {
+      newAlert();
+      notifyText.innerText = "Write something :/"
+    }
     else {
       const newTask = document.createElement("li");
       newTask.classList.add("todo__item");
@@ -63,6 +68,18 @@ taskList.addEventListener('click', (e) => {
     }
 })
 
+// Clear all tasks
+clearAll.addEventListener('click',() => {
+  while (taskList.firstChild) {
+    taskList.removeChild(taskList.firstChild);
+  }
+  newAlert();
+  notifyText.innerText = "All task was cleared"
+  total = taskList.children.length;
+  allTask.innerText = total;
+  saveData();
+})
+
 // Alert function
 newAlert = () => {
   if (notify.classList[2] === "page__popup_disabled") {
@@ -72,7 +89,7 @@ newAlert = () => {
   setTimeout(() => {
     notify.classList.replace("page__popup_enabled", "page__popup_disabled");
     notify.classList.remove("page__popup_alert");
-  }, 3000);
+  }, 2000);
 }
 
 // localStorage
