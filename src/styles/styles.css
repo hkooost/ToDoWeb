@@ -31,7 +31,6 @@ a {
 .nav__logo {
   display: inline-block;
   padding: 10px;
-  width: 50px;
   fill: var(--foreground);
 }
 
@@ -184,6 +183,7 @@ a {
 
 .clear-all {
   cursor: pointer;
+  fill: var(--foreground);
 }
 
 :root {
