@@ -6,7 +6,6 @@ const allTask = document.querySelector('.todo-all');
 const clearAll = document.querySelector('.clear-all');
 let total = 0;
 
-allTask.innerText = total;
 // Create task
 taskValue.addEventListener('keypress', (e) => {
   if (e.key === "Enter") {
