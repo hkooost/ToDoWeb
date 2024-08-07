@@ -7,11 +7,6 @@ themes.forEach((currentTheme) => {
   currentTheme.addEventListener("click", () => {
     saveTheme(currentTheme.classList[1]);
   })
-  if (window.matchMedia('(prefers-color-scheme: dark)')) {
-    if (currentTheme.classList[1] === 'dark') {
-      currentTheme.checked = true;
-    }
-  }
 })
 let loadTheme = () => {
   let savedTheme = localStorage.getItem("theme");
