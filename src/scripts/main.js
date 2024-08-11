@@ -2,9 +2,6 @@ const taskValue = document.querySelector(".task-add__input");
 const taskList = document.querySelector(".todo");
 const notify = document.querySelector(".popup");
 const notifyText = document.querySelector(".popup__text");
-const allTask = document.querySelector('.todo-all');
-const clearAll = document.querySelector('.clear-all');
-let total = 0;
 
 // Create task
 taskValue.addEventListener('keypress', (e) => {
@@ -40,10 +37,7 @@ taskValue.addEventListener('keypress', (e) => {
       todoDate.classList.add("todo__time");
       todoDate.innerText = time.toLocaleString();
       todoContent.appendChild(todoDate);
-
-      total = taskList.children.length;
     }
-    allTask.innerText = total;
     saveData();
   }
 });
@@ -61,22 +55,8 @@ taskList.addEventListener('click', (e) => {
   // Delete
   if (item.classList[0] === 'todo__delete') {
       item.parentElement.remove();
-      total = taskList.children.length;
-      allTask.innerText = total;
       saveData();
     }
-})
-
-// Clear all tasks
-clearAll.addEventListener('click',() => {
-  while (taskList.firstChild) {
-    taskList.removeChild(taskList.firstChild);
-  }
-  newAlert();
-  notifyText.innerText = "Tasks cleared"
-  total = taskList.children.length;
-  allTask.innerText = total;
-  saveData();
 })
 
 // Alert function
@@ -94,10 +74,8 @@ newAlert = () => {
 // localStorage
 let saveData = () => {
   localStorage.setItem("data", taskList.innerHTML);
-  localStorage.setItem("total", allTask.innerText);
 }
 let getData = () => {
   taskList.innerHTML = localStorage.getItem("data");
-  allTask.innerText = localStorage.getItem("total")
 }
 getData();
